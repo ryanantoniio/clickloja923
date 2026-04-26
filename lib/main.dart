@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 import 'temas/app_theme.dart';
 import 'modelos/cart_provider.dart';
 import 'telas/home_screen.dart';
-// import 'telas/search_screen.dart'; enquanto guilherme coloca a parte dele
+import 'telas/search_screen.dart';
 import 'telas/carrinho.dart';
-// import 'telas/profile_screen.dart';
+import 'telas/profile_screen.dart';
 import 'widgets/bottom_nav_bar.dart';
 
 void main() {
@@ -66,9 +66,9 @@ class _MainNavigatorState extends State<MainNavigator> {
     // Inicializa a lista de telas passando o provider necessário para elas
     _screens = [
       HomeScreen(cartProvider: _cartProvider),
-      // SearchScreen(cartProvider: _cartProvider),
-      // CartScreen(cartProvider: _cartProvider),
-      // const ProfileScreen(),
+      SearchScreen(cartProvider: _cartProvider),
+      CartScreen(cartProvider: _cartProvider),
+      const ProfileScreen(),
     ];
   }
 
